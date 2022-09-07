@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/*Colors*/
+    $color-bkg1: hsl(31, 77%, 52%); 
+    $color-bkg2: hsl(184, 100%, 22%);
+    $color-bkg3: hsl(179, 100%, 13%);
+    $color-txt-p: hsla(0, 0%, 100%, 0.75);
+    $color-enph-hb: hsl(0, 0%, 95%);
+/*Fonts*/
+    $font-h: 700 36px 'Big Shoulders Display', cursive;
+    $font-p: 400 15px 'Lexend Deca', sans-serif;
+    $font-b: 400 15px 'Lexend Deca', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: $color-enph-hb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    max-width: 100%;
+    min-height: 100vh;
+    .main-container{
+        max-width: 1000px;
+        height: 500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 20px;
+        .item-holder{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 6%;
+            align-items: flex-start;
+            justify-content: space-between;
+            img{
+                width: auto;
+                height: auto;
+            }
+            h1{
+                font: $font-h;
+                color: $color-enph-hb;
+            }
+            p{
+                font: $font-p;
+                color: $color-txt-p;
+                line-height: 160%;
+            }
+            a{
+                width: 150px;
+                height: 45px;
+                background-color: $color-enph-hb;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 30px;
+                font: $font-b;
+                margin: 50px 0 0 0 ;
+            }
+            a:hover{
+                border: 2px solid $color-enph-hb;
+                background-color: transparent;
+                color: $color-enph-hb;
+            }
+        }
+        .item1{
+            background-color: $color-bkg1;
+            a{
+                color: $color-bkg1;
+            }
+        }
+        .item2{
+            background-color: $color-bkg2;
+            a{
+                color: $color-bkg2;
+            }
+        }
+        .item3{
+            background-color: $color-bkg3;
+            a{
+                color: $color-bkg3;
+            }
+        }
+
+    }
+
+    .attribution { 
+        font-size: 11px; 
+        text-align: center; 
+        position: absolute;
+        bottom: 0;
+    }
+    .attribution a { color: hsl(228, 45%, 44%); }
+}
+@media only screen and (max-width:650px){
+    body{
+        .main-container{
+            max-width: 400px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 20px;
+            .item-holder{
+                display: flex;
+                flex-direction: column;
+                padding: 6%;
+                align-items: flex-start;
+                justify-content: space-between;
+                img{
+                    margin: 20px;
+                }
+                h1{
+                    margin: 20px;
+                }
+                p{
+                    margin: 20px;
+                }
+                a{
+                    margin: 30px 20px ;
+                }
+            }
+ 
+        }
+    }
+}
